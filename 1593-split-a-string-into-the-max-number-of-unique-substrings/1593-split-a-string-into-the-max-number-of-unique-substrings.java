@@ -1,29 +1,23 @@
 class Solution {
+        int max = 0;
     public int maxUniqueSplit(String s) {
-        int[] ans = new int[]{0};
-        dfs(s, 0, new HashSet<>(), ans);
-        return ans[0];
+        split(0,new HashSet<>(),s);
+        return max;
     }
-
-    private void dfs(String s, int start, Set<String> seen, int[] ans) {
-        if (start == s.length()) {
-            ans[0] = Math.max(ans[0], seen.size());
+    
+    public void split(int ind , Set<String> set , String s){
+        
+        if(ind >= s.length()){
+            max = Math.max(set.size(),max);
             return;
         }
-
-        for (int i = 1; start + i <= s.length(); ++i) {
-            String cand = s.substring(start, start + i);
-            if (seen.contains(cand))
-                continue;
-            seen.add(cand);
-            dfs(s, start + i, seen, ans);
-            seen.remove(cand);
+    
+        for(int i  = ind + 1 ; i <= s.length() ; i++){
+            String newS = s.substring(ind,i);
+            if(set.add(newS)){
+                split(i,set,s);
+                set.remove(newS);
+            }
         }
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        String input = "abac";
-        System.out.println(solution.maxUniqueSplit(input));  // Output: 2
     }
 }
