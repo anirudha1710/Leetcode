@@ -1,5 +1,6 @@
 class Solution {
     public boolean isPerfectSquare(int num) {
+        // code here 
         long l = 1;
     long r = num;
 
