@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards">914. X of a Kind in a Deck of Cards</a></h2><h3>Easy</h3><hr><p>You are given an integer array <code>deck</code> where <code>deck[i]</code> represents the number written on the <code>i<sup>th</sup></code> card.</p>
+<h2><a href="https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/">914. X of a Kind in a Deck of Cards</a></h2><h3>Easy</h3><hr><p>You are given an integer array <code>deck</code> where <code>deck[i]</code> represents the number written on the <code>i<sup>th</sup></code> card.</p>
 
 <p>Partition the cards into <strong>one or more groups</strong> such that:</p>
 
